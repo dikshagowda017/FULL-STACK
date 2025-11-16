@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Operations</title>
+</head>
+<body>
+<script>
+let str = prompt("Enter a string:");
+console.log("Original String:", str);
+
+console.log("Length of the string:", str.length);
+
+let start = str.indexOf("JavaScript");
+if (start !== -1) {
+  let extracted = str.substring(start, start + "JavaScript".length);
+  console.log("Extracted word:", extracted);
+} else {
+  console.log("The word 'JavaScript' was not found in the string.");
+}
+
+let newStr = str.replace("JavaScript", "Python");
+console.log("After replacing 'JavaScript' with 'Python':", newStr);
+
+function isPalindrome(s) {
+  if (!s) return false;
+  let cleaned = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  let reversed = cleaned.split('').reverse().join('');
+  return cleaned === reversed && cleaned.length > 0;
+}
+
+if (isPalindrome(str)) {
+  console.log("The string IS a palindrome.");
+} else {
+  console.log("The string is NOT a palindrome.");
+}
+</script>
+</body>
+</html>

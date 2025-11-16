@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>City Array Operations</title>
+</head>
+<body>
+<script>
+let cities = ["Delhi", "Mumbai", "Chennai", "Kolkata", "Bangalore"];
+
+console.log("----- City Array Operations -----");
+
+console.log("Original array:", cities.join(", "));
+
+console.log("Total cities:", cities.length);
+
+cities.push("Pune");
+console.log("After adding a new city:", cities.join(", "));
+
+cities.shift();
+console.log("After removing the first city:", cities.join(", "));
+
+let index = cities.indexOf("Chennai");
+console.log("Index of Chennai:", index);
+
+console.log("--------------------------------");
+</script>
+</body>
+</html>

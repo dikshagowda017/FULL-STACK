@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Object</title>
+</head>
+<body>
+<script>
+let student = {
+  name: "Diksha",
+  grade: 85,
+  subjects: ["Math", "Science", "English"],
+  displayInfo: function() {
+    console.log("Name:", this.name);
+    console.log("Grade:", this.grade);
+    console.log("Subjects:", this.subjects.join(", "));
+  }
+};
+
+student.displayInfo();
+
+student.passed = student.grade >= 40 ? true : false;
+console.log("Passed:", student.passed);
+
+for (let key in student) {
+  console.log(key + ":", student[key]);
+}
+</script>
+</body>
+</html>
